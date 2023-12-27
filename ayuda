@@ -65,16 +65,25 @@ while True:
             continuabuscar=input(" \n quiere continuar eliminando s/n : ")
             if continuabuscar != 's':
                 break 
-elif opcion == "5":
-    if not alumnos_ciberseguridad:
-        print("No hay alumnos registrados.")
-    else:
-        print("Lista de alumnos:")
-        for nombre in alumnos_ciberseguridad:
-            print(nombre)
 
-elif opcion == "6":
-    respuesta = input("¿Está seguro de salir del programa? (Sí/No): ").lower()
-    if respuesta == 'si' or respuesta == 's':
-        print("Saliendo del Menú. ¡Hasta luego!")
-        break
+    elif opcion == '5':
+        while True:
+            if not alumnos_ciberseguridad:
+                print("No hay alumnos registrados.")
+            else:
+                print("Lista de alumnos:")
+
+            for nombre in alumnos_ciberseguridad:
+                print(nombre)
+            continuamostrar=input(" \n quiere continuar mostrando s/n : ")
+            if continuamostrar  != 's':
+                break
+
+
+    elif opcion == '6':
+        respuesta = input("¿Está seguro de salir del programa? (Sí/No): ").lower()
+    
+        if respuesta == 'si' or respuesta == 's':
+            print("Saliendo del Menú. ¡Hasta luego!")
+            break
+
