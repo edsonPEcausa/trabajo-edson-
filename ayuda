@@ -50,34 +50,22 @@ while True:
                 break
 
 
+    
     elif opcion == '4':
-        while True:
-            if not alumnos_ciberseguridad:
-                print("No hay alumnos registrados.")
+       if not alumnos_ciberseguridad:
+        print("La lista de alumnos está vacía.")
+        return
+    print("Lista de Alumnos:")
+    for i, nombre in enumerate(alumnos_ciberseguridad):
+        print(f"{i+1}. {nombre}")
             
-            else:
-                nombre = input("Ingrese el nombre del alumno que desea mostrar: ")
-            
-                if nombre in alumnos_ciberseguridad:
-                    print("Nombre del alumno: ", nombre)
-                else:
-                    print("el alumno ", nombre, "no se encuentra en la lista.")
-            continuabuscar=input(" \n quiere continuar eliminando s/n : ")
-            if continuabuscar != 's':
-                break 
-
-    elif opcion == '5':
-        while True:
-            if not alumnos_ciberseguridad:
-                print("No hay alumnos registrados.")
-            else:
-                print("Lista de alumnos:")
-
-            for nombre in alumnos_ciberseguridad:
-                print(nombre)
-            continuamostrar=input(" \n quiere continuar mostrando s/n : ")
-            if continuamostrar  != 's':
-                break
+    def opcion == '5':
+    if not alumnos_ciberseguridad:
+        print("La lista de alumnos está vacía.")
+        return
+    print("Lista de Todos los Alumnos:")
+    for i, nombre in enumerate(alumnos_ciberseguridad):
+        print(f"{i+1}. {nombre}")
 
 
     elif opcion == '6':
