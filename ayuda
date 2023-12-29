@@ -87,3 +87,31 @@ while True:
             print("Saliendo del Menú. ¡Hasta luego!")
             break
 
+
+
+
+
+
+verificacion de contraseña 
+
+
+def validar_contrasena():
+    contrasena = input("Ingrese su contraseña (debe tener 10 caracteres): ")
+    confirmacion = input("Confirme su contraseña: ")
+
+    if len(contrasena) != 10 or contrasena != confirmacion:
+        print("La contraseña no cumple con los requisitos.")
+        return
+
+    caracteres_especiales = "#$%@_-"
+    if not any(caracter in contrasena for caracter in caracteres_especiales) or \
+       not any(c.isupper() for c in contrasena) or \
+       not sum(c.islower() for c in contrasena) >= 5 or \
+       not sum(c.isdigit() for c in contrasena if c.isalpha()) >= 2:
+        print("La contraseña no cumple con los requisitos de seguridad.")
+    else:
+        print("La contraseña es segura.")
+
+
+validar_contrasena()
+
