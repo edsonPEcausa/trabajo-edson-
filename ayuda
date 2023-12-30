@@ -52,28 +52,19 @@ while True:
 
     
     elif opcion == '4':
-       if not alumnos_ciberseguridad:
-        print("La lista de alumnos está vacía.")
-        return
-    print("Lista de Alumnos:")
-    for i, nombre in enumerate(alumnos_ciberseguridad):
-        print(f"{i+1}. {nombre}")
+        print("\n Lista de Alumnos \n")
+        busqueda = input("Que nombre quieres buscar : ")
+        if busqueda not in alumnos_ciberseguridad:
+            print("No esta en la lista de alumno " , busqueda)
+        
+        for i, nombre in enumerate(alumnos_ciberseguridad):
+            if nombre == busqueda:
+                print("Indice", i ,"esta el alumno ",nombre)
             
-    def opcion == '5':
-    if not alumnos_ciberseguridad:
-        print("La lista de alumnos está vacía.")
-        return
-    print("Lista de Todos los Alumnos:")
-    for i, nombre in enumerate(alumnos_ciberseguridad):
-        print(f"{i+1}. {nombre}")
-
-
-    elif opcion == '6':
-        respuesta = input("¿Está seguro de salir del programa? (Sí/No): ").lower()
-    
-        if respuesta == 'si' or respuesta == 's':
-            print("Saliendo del Menú. ¡Hasta luego!")
-            break
+    elif opcion == '5':
+        print("\nMostrar todos los nombres \n")
+        for i, nombre in enumerate(alumnos_ciberseguridad):
+                print("Indice", i ,"esta el alumno ",nombre)
 
 
 
