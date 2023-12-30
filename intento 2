@@ -46,34 +46,39 @@ while True:
             else:
                 print("El alumno ", nombre,"no se encuentra en la lista.")
             continuaaeliminar=input(" \n quiere continuar eliminando s/n : ")
-            if continuaactualizar != 's':
+            if continuaaeliminar != 's':
                 break
 
 
     
     elif opcion == '4':
-       if alumnos_ciberseguridad:
-            indice = int(input("Ingrese el número del nombre que desea mostrar: ")) - 1
-            if 0 <= indice < len(alumnos_ciberseguridad):
-                print(f"Nombre: {alumnos_ciberseguridad[indice]}, Posición en la lista: {indice + 1}")
-            else:
-                print("Índice no válido.")
-       else:
-            print("No hay nombres para mostrar.")
-            break 
+     
+        print("\n Lista de Alumnos \n")
+        nombre = input("Que nombre quieres buscar : ")
+        if nombre not in alumnos_ciberseguridad:
+            print("No esta en la lista de alumno " , nombre)
+        
+        for i, nombre in enumerate(alumnos_ciberseguridad):
+            if nombre == alumnos_ciberseguridad:
+                print("Indice", i ,"esta el alumno ",nombre)
+        continuabuscar = input(" \n quiere continuar buscando s/n : ")
+        if continuabuscar !=  's':
+            break
             
     elif opcion == '5':
-        print("\nMostrar todos los nombres \n")
-        for i, nombre in enumerate(alumnos_ciberseguridad):
+        while True:
+            print("\nMostrar todos los nombres \n")
+            for i, nombre in enumerate(alumnos_ciberseguridad):
                 print("Indice", i ,"esta el alumno ",nombre)
-        break
+
+            continuamostrar = input(" \n quiere continuar mostrando s/n : ")       
+            if continuamostrar != "s": break
 
 
     elif opcion == '6':
-        print("Opción no válida. Intente nuevamente.")
 
-    realizar_otra_operacion = input("¿Desea realizar otra operación? (s/n): ")
-    if realizar_otra_operacion.lower() != 's':
-        print("¡Hasta luego!")
-        break
+        realizar_otra_operacion = input("¿Desea realizar otra operación? (s/n): ")
+        if realizar_otra_operacion != 's':
+            print("¡Hasta luego!")
+            break
 
